@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>about FAVORITE</title>
-        <link rel="stylesheet" href="menu.css">
+        <title>about Sumin Ahn</title>
     </head>
-    <body>
-        <h1>FAVORITE</h1>
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .flex-container {
+            display: grid;
+            width: 960px;
+            
+            justify-content: space-around;
+            grid-template-areas: 
+            "a b"
+            "c d";
+
+        }
+        .item1 {grid-area:a; display: grid; grid-template-columns: 1fr 1fr;}
+        .item2 {grid-area:b; display: grid; grid-template-columns: 1fr 1fr;}
+        .item3 {grid-area:c; display: grid; grid-template-columns: 1fr 1fr;}
+        .item4 {grid-area:d; display: grid; grid-template-columns: 1fr 1fr;}
+        .flex-container > div {
+            background-color: #f6ffc6;
+            border: 5px solid pink;
+            margin: 10px;
+            overflow: hidden;
+            width: 450px;
+            height: 250px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 이미지를 컨테이너에 맞게 확대 또는 축소합니다. */
+        }
+        div p {
+            width: 200px; margin: 5px auto;
+        }
+
+
+    </style>
+    <body style="width: 960px; margin: 0 auto;">
+        <header>
+            <h1 style="color: pink;">FAVORITE</h1>
+        </header>
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
@@ -14,5 +55,44 @@
                 <li><a href="goal.html">GOAL</a></li>
             </ul>
         </nav>
+        <section>
+            <div class="flex-container">
+                <div class="item1">
+                    <div style="display: inline-block;"><img src="images/dance.jpg" alt="profile_img" width="250px"></div>
+                    <div style="display: inline-block;">
+                        <h2>새로운 것 도전하기</h2>
+                        <p>새로운 영역을 삶에 끌어당기는 것을 즐깁니다.</p> 
+                        <p>제빵, 댄스, 피티 등 다양한 것을 도전하였고, 앞으로도 도전할 것입니다.</p>
+                    </div>
+                </div>
+                <div class="item2">
+                    <div style="display: inline-block;"><img src="images/profile_img.png" alt="profile_img" width="250px"></div>
+                    <div style="display: inline-block;">
+                        <h2>일기 쓰기</h2>
+                        <p>일기를 쓰며 하루를 마무리 하는 것을 좋아합니다.</p>
+                        <p>지나칠 수 있는 작은 일상들을 소중히 여길 수 있기 때문입니다.</p>
+                    </div>
+                </div> 
+                <div class="item3">
+                    <div style="display: inline-block;"><img src="images/edu.jpg" alt="edu" width="250px"></div>
+                    <div style="display: inline-block;">
+                        <h2>교육</h2>
+                        <p>작년 1년 동안은 지역 아동 센터에서 수학 교육 봉사를 했고, 
+                            올해는 학과 전공 과목인 [통계학1] 멘토로서 활동하고 있습니다. </p>
+                    </div>
+                </div>
+                <div class="item4">
+                    <div style="display: inline-block;"><img src="images/fav_drawing.jpg" alt="profile_img" width="250px"></div>
+                    <div style="display: inline-block;">
+                        <h2>그림 그리기</h2>
+                        <p>다양한 재료와 색을 이용해 그림 그리는 것이 즐겁습니다.</p>
+                        <p>공책 구석에 하는 작은 낙서도, 캔버스에 물감으로 그리는 그림도 좋아합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+
+        </footer>
     </body>
 </html>

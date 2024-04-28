@@ -5,10 +5,11 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #FFCCE5;
 }
 li a {
     color: white;
+    
     display: inline-block;
     text-align: center;
     padding: 14px 16px;
@@ -16,5 +17,5 @@ li a {
     
 }
 li a:hover {
-    background-color: #111;
+    background-color: #ffbfde;
 }

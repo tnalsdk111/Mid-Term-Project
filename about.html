@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>about</title>
-        <link rel="stylesheet" href="menu.css">
+        <title>about Sumin Ahn</title>
     </head>
-    <body>
-        <h1>ABOUT</h1>
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .flex-container {
+            display: grid;
+            width: 960px;
+            
+            justify-content: space-around;
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        
+        .flex-container > div {
+            background-color: #f6ffc6;
+            border: 5px solid pink;
+            margin: 20px auto;
+            overflow: hidden;
+            width: 450px;
+            height: 500px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 이미지를 컨테이너에 맞게 확대 또는 축소합니다. */
+        }
+        div > p {
+            width: 200px; margin: 5px auto;
+        }
+        .table-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .cell {
+            margin: auto;
+        }
+
+    </style>
+    <body style="width: 960px; margin: 0 auto;">
+        <header>
+            <h1 style="color: pink;">ABOUT</h1>
+        </header>
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
@@ -14,5 +56,22 @@
                 <li><a href="goal.html">GOAL</a></li>
             </ul>
         </nav>
+        <section>
+            <div class="flex-container">
+                <div><img src="images/profile_img1.jpg" alt="profile_img1"></div>
+                <div class="table-container">
+                    <div class="cell"><p>Name</p><h2>Sumin Ahn</h2></div>
+                    <div class="cell"><p>Age</p><h2>21</h2></div>
+                    <div class="cell"><p>department</p><h2>Statistics</h2></div>
+                    <div class="cell"><p>MBTI</p><h2>ENFJ</h2></div>
+                    <div class="cell"><p>Front-end</p><h2>HTML, CSS</h2></div>
+                    <div class="cell"><p>Back-end</p><h2>Python, R, MySQL</h2></div>
+                </div>
+            </div>
+            
+        </section>
+        <footer>
+
+        </footer>
     </body>
 </html>

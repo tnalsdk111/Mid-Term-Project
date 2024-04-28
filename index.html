@@ -1,9 +1,79 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>main page</title>
+        <title>about Sumin Ahn</title>
     </head>
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        
+        ul {
+                display: flex;
+                justify-content: space-around;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+            li a {
+                color: white;
+                display: inline-block;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                
+            }
+            li a:hover {
+                background-color: #111;
+            }
+        * {
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .flex-container {
+            display: flex;
+            background-color: orange;
+            justify-content: space-around;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 10%;
+
+        }
+        .flex-container > div {
+            background-color: green;
+            border: 5px solid pink;
+            margin: 10px;
+            overflow: hidden;
+            width: 350px;
+            height: 400px;
+            align-items: center;
+        }
+        .box {
+
+        }
+    </style>
     <body>
-        <h1>main page</h1>
+        <header>
+            <h1>about Sumin Ahn</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="favorite.html">FAVORITE</a></li>
+                <li><a href="goal.html">GOAL</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="flex-container">
+                <div><a href="favorite.html">FAVORITE</a></div>
+                <div>about sumin</div>
+                <div><a href="goal.html">GOAL</a></div>
+            </div>
+        </section>
+        <footer>
+
+        </footer>
     </body>
 </html>

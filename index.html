@@ -6,56 +6,46 @@
     <link rel="stylesheet" href="menu.css">
     <style>
         
-        ul {
-                display: flex;
-                justify-content: space-around;
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #333;
-            }
-            li a {
-                color: white;
-                display: inline-block;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                
-            }
-            li a:hover {
-                background-color: #111;
-            }
         * {
             box-sizing: border-box;
             text-align: center;
         }
         .flex-container {
-            display: flex;
+            display: grid;
+            width: 960px;
             background-color: orange;
             justify-content: space-around;
-            width: 80%;
-            margin-left: 10%;
-            margin-right: 10%;
-            margin-top: 10%;
+            grid-template-areas: 
+            "a b"
+            "c d";
 
         }
+        .item1 {grid-area:a; display: grid; grid-template-columns: 1fr 1fr;}
+        .item2 {grid-area:b; display: grid; grid-template-columns: 1fr 1fr;}
+        .item3 {grid-area:c; display: grid; grid-template-columns: 1fr 1fr;}
+        .item4 {grid-area:d; display: grid; grid-template-columns: 1fr 1fr;}
         .flex-container > div {
             background-color: green;
             border: 5px solid pink;
             margin: 10px;
             overflow: hidden;
-            width: 350px;
-            height: 400px;
-            align-items: center;
+            width: 450px;
+            height: 250px;
         }
-        .box {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 이미지를 컨테이너에 맞게 확대 또는 축소합니다. */
+        }
+        div > p {
+            width: 200px; margin: 5px auto;
+        }
 
-        }
+
     </style>
-    <body>
+    <body style="width: 960px; margin: 0 auto;">
         <header>
-            <h1>about Sumin Ahn</h1>
+            <h1 style="color: pink;">about Sumin Ahn</h1>
         </header>
         <nav>
             <ul>
@@ -67,9 +57,43 @@
         </nav>
         <section>
             <div class="flex-container">
-                <div><a href="favorite.html">FAVORITE</a></div>
-                <div>about sumin</div>
-                <div><a href="goal.html">GOAL</a></div>
+                <div class="item1">
+                    <div style="display: inline-block;"><img src="images/profile_img.png" alt="profile_img" width="250px"></div>
+                    <div style="display: inline-block;">
+                        <h2>HOME</h2>
+                        <p style="width: 200px; margin: 0 auto;"><strong>HOME</strong> 버튼을 누르면
+                        지금 계신 기본 페이지로 돌아옵니다. </p>
+                        <p>메뉴바를 통해 원하는 페이지로 이동할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="item2">
+                    <div style="display: inline-block;"><img src="images/profile_img.png" alt="profile_img" width="250px"></div>
+                    <div style="display: inline-block;">
+                        <h2>ABOUT</h2>
+                        <p style="width: 200px; margin: 0 auto;"><strong>ABOUT</strong> 버튼을 누르면
+                        해당 페이지로 이동합니다. </p>
+                        <p>저에 대한 정보를 확인할 수 있습니다.</p>
+
+                    </div>
+                </div> 
+                <div class="item3">
+                    <div style="display: inline-block;"><img src="images/profile_img.png" alt="profile_img" width="250px"></div>
+                    <div style="display: inline-block;">
+                        <h2>FAVORITE</h2>
+                        <p><strong>FAVORITE</strong> 버튼을 누르면
+                        해당 페이지로 이동합니다. </p>
+                        <p>제가 좋아하는 것이 기록되어 있습니다.</p>
+                    </div>
+                </div>
+                <div class="item4">
+                    <div style="display: inline-block;"><img src="images/profile_img.png" alt="profile_img" width="250px"></div>
+                    <div style="display: inline-block;">
+                        <h2>GOAL</h2>
+                        <p style="width: 200px; margin: 0 auto;"><strong>GOAL</strong> 버튼을 누르면
+                        해당 페이지로 이동합니다. </p>
+                        <p>저의 목표가 기록되어 있습니다.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <footer>
